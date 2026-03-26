@@ -5,8 +5,8 @@ describe("normalize helpers", () => {
   it("normalizes explicit date formats", () => {
     expect(normalizeDate("2026-03-09")).toBe("20260309");
     expect(normalizeDate("2026.03.09.")).toBe("20260309");
-    expect(normalizeDate("26.03.02")).toBe("260302");
-    expect(normalizeDate("26-03-02")).toBe("260302");
+    expect(normalizeDate("26.03.02")).toBe("20260302");
+    expect(normalizeDate("26-03-02")).toBe("20260302");
     expect(normalizeDate("2026년 3월 9일")).toBe("20260309");
     expect(normalizeDate("20260309")).toBe("20260309");
   });

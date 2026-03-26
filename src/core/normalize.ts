@@ -76,7 +76,16 @@ function parseExplicitDate(input: string): string {
   const compactMatch = trimmed.match(/^(\d{8}|\d{6})$/);
 
   if (compactMatch) {
-    return compactMatch[1];
+    const raw = compactMatch[1];
+    if (raw.length === 6) {
+      const year = 2000 + Number(raw.slice(0, 2));
+      const month = Number(raw.slice(2, 4));
+      const day = Number(raw.slice(4, 6));
+      if (isValidDate(year, month, day)) {
+        return formatDateParts(year, month, day);
+      }
+    }
+    return raw;
   }
 
   const match = trimmed.match(
@@ -96,7 +105,7 @@ function parseExplicitDate(input: string): string {
     return "";
   }
 
-  return formatDateParts(year, month, day, yearText.length === 2);
+  return formatDateParts(year, month, day);
 }
 
 function parseMonthDay(input: string, referenceDate: Date): string {

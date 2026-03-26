@@ -23,7 +23,7 @@ export const OPTIONS = {
 
 export const DEPENDENT_OPTIONS: Record<string, Record<string, string[]>> = {
   상담: {
-    부모상담: ["보호자면담", "가정연계"],
+    학부모상담: ["학생관련상담", "교사관련상담", "학습", "기타"],
     개인상담: ["학업", "진로", "성격", "대인관계", "행동", "정서"],
     집단상담: ["관계향상", "정서지원", "적응지원"]
   },

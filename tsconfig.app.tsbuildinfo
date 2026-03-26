@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/reference.ts","./src/types.ts","./src/core/export.ts","./src/core/normalize.ts","./src/core/parse.ts","./src/core/validate.ts","./src/store/cdcstore.ts","./src/test/setup.ts"],"version":"5.9.3"}
